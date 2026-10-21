@@ -27,3 +27,18 @@ int main() {
         printf("no");
     return 0;
 }
+
+/*In SkillLand, there are X schools, and each school has Y students. A total of Z students passed the exam.
+
+Determine whether the percentage of students who passed is between 35% and 75%, inclusive.*/
+
+#include<stdio.h>
+int main(){
+    int x,y,z;
+    scanf("%d %d %d", &x, &y, &z);
+    if(x*y*0.35<=z && z<=x*y*0.75)
+        printf("yes");
+    else
+        printf("no");
+    return 0;
+}
