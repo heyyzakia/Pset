@@ -1,0 +1,18 @@
+/* A cinema sells movie tickets for ₹X each. A customer buys Y tickets and has a total budget of ₹Z.
+Write a C program to determine whether the customer can afford all the tickets and still have at least ₹100 left.*/
+
+#include<stdio.h>
+int main(){
+    int x,y,z;
+    scanf("%d %d %d", &x, &y, &z);
+    if(z-(x*y) >=100)
+        printf("yes");
+    else
+        printf("no");
+    return 0;
+}
+
+sol:
+x * y calculates the total ticket cost.
+z - (x * y) calculates the remaining money.
+>= 100 checks whether at least ₹100 remains.
