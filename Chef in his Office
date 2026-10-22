@@ -1,0 +1,57 @@
+/*Recently Chef joined a new company. In this company, the employees have to work for X hours each day from Monday to Thursday. Also, in this company, Friday is called Chill Day — employees only have to work for 
+Y hours (Y<X) on Friday. Saturdays and Sundays are holidays.
+Determine the total number of working hours in one week.*/
+
+#include <stdio.h>
+int main() {
+	int mon_thu, fri, total; 
+	printf("enter mon-thu x hours: "); scanf("%d", &mon_thu);
+	printf("enter fri y hours (enter less than x): "); scanf("%d", &fri);
+	total=mon_thu*4+fri;
+	printf("The total number of working hours in a week are: %d", total);
+    return 0;
+}
+
+------------------------------------------------------------------------------------------------------------------------------------
+/*A company follows this work schedule:
+- Monday to Wednesday: Employees work for X hours per day.
+- Thursday and Friday: Employees work for Y hours per day.
+- Saturday: Employees work for Z hours.
+- Sunday: Holiday.
+Given X, Y, and Z, calculate the total number of working hours in one week.
+
+Input format:
+Three integers X, Y, and Z in a single line.
+
+Output format:
+Print the total working hours in one week.*/
+
+#include<stdio.h>
+int main(){
+int x,y,z,total;
+scanf("%d %d %d", &x, &y, &z);
+total = 3*x+2*y+z;
+printf("%d", total);
+return 0;
+}
+
+------------------------------------------------------------------------------------------------------------------------------------
+/*A company follows this schedule:
+- Monday to Friday: X hours per day.
+- Saturday: If the total working hours from Monday to Friday are more than 40 hours, employees work for Y hours on Saturday. Otherwise, they work for Z hours.
+- Sunday: Holiday.
+Given X, Y, and Z, calculate the total working hours in one week.*/
+
+#include <stdio.h>
+
+int main() {
+	int x, y, z, total; 
+	scanf("%d %d %d", &x, &y, &z);
+	total=5*x;
+    if(total>40)
+        total=5*x+y;
+    else
+        total=5*x+z;
+	printf("%d", total);
+    return 0;
+}
