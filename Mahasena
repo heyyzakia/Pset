@@ -1,0 +1,25 @@
+/*Kattapa, as you all know was one of the greatest warriors of his time. The kingdom of Maahishmati had never lost a battle under him (as army-chief), and the reason for that was their really powerful army, also called as Mahasena.
+Kattapa was known to be a very superstitious person. He believed that a soldier is "lucky" if the soldier is holding an even number of weapons, and "unlucky" otherwise. He considered the army as "READY FOR BATTLE" if the count of "lucky" soldiers is strictly greater than the count of "unlucky" soldiers, and "NOT READY" otherwise.
+Given the number of weapons each soldier is holding, your task is to determine whether the army formed by all these soldiers is "READY FOR BATTLE" or "NOT READY".*/
+
+#include <stdio.h>
+int main() {
+	int sol[10], n, even=0, odd=0;
+	printf("enter no of soldiers: ");
+	scanf("%d", &n);
+	for(int i=0;i<n;i++){
+        printf("soldier %d: ", i+1);
+	    scanf("%d", &sol[i]);
+	    if(sol[i]%2==0){
+	    even++;
+	} else {
+	    odd++;
+	}
+	}
+	if(even > odd)
+	    printf("READY FOR BATTLE");
+	else
+	    printf("NOT READY");
+	
+	return 0;
+}
