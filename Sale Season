@@ -1,0 +1,27 @@
+It is the sale season again, and Chef bought items worth a total of X rupees. The sale season discount offers are structured as follows:
+• If X <= 100, no discount is applied.
+• If 100 < X <= 1000, a discount of 25 rupees is applied.
+• If 1000 < X <= 5000, a discount of 100 rupees is applied.
+• If X > 5000, a discount of 500 rupees is applied.
+Find the final amount Chef needs to pay for his shopping after the discount is applied.
+
+#include <stdio.h>
+int main() {
+	int x,discount,final_price;
+	scanf("%d",&x);
+	if(x<=100){
+	    discount=0;
+	    printf("no discount\n");
+	}
+	else if(x>100 && x<=1000)
+	    discount=25;
+	else if(x>1000 && x<=5000)
+	    discount=100;
+	else if(x>5000)
+	    discount=500;
+	final_price=x-discount;
+	printf("final amount chef needs to pay %d", final_price);
+	return 0;
+
+}
+
