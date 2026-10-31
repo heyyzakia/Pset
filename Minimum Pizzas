@@ -15,3 +15,56 @@ int main() {
     }
     return 0;
 }
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+🚌 Bus Seat Booking
+A bus has N seats available. There are X passengers who want to travel.
+
+Each bus can accommodate exactly 40 passengers.
+
+The company wants to arrange the minimum number of buses required to accommodate all passengers.
+
+However, there is a condition:
+- If the number of passengers is less than or equal to the available seats in one bus, only one bus is needed.
+- If passengers exceed the capacity, additional buses must be arranged.
+Input Format:
+- First line contains an integer T, representing the number of test cases.
+- Each test case contains an integer X, representing the number of passengers.
+
+#include<stdio.h>
+int main(){
+    int t,x,min;
+    scanf("%d", &t);
+    while(t--){
+        scanf("%d",&x);
+        min=x/40;
+        if(x%40!=0)
+            min++;
+        printf("\nmin buses %d", min);
+        }
+    return 0;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------
+📦 Parcel Packaging
+A delivery company has N parcels to send. Each delivery box can hold a maximum of 12 parcels.
+Find the minimum number of boxes required to pack all the parcels.
+Input Format:
+- The first line contains an integer T, representing the number of test cases.
+- Each test case contains one integer N, representing the number of parcels.
+
+
+#include<stdio.h>
+int main(){
+    int t,n,min;
+    scanf("%d",&t);
+    while(t--){
+       scanf("%d",&n); //no of parcels
+       min=n/12;
+       if(n%12!=0)
+           min++;
+       printf("min boxes %d", min);
+    }
+    return 0;
+}
