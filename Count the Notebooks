@@ -1,0 +1,21 @@
+You know that \(1 \text{ kg}\) of pulp can be used to make \(1000\) pages, and \(1\) notebook consists of \(100\) pages.
+Suppose a notebook factory receives \(N \text{ kg}\) of pulp. Your task is to determine how many notebooks can be made from that amount of pulp.
+Input Format
+• The first line will contain \(T\), the number of test cases. Then the test cases follow.
+• Each testcase contains a single integer \(N\) — the weight of the pulp the factory has (in kgs).
+Output Format
+• For each testcase, output on a new line the total number of notebooks that can be made using \(N \text{ kgs}\) of pulp.
+
+
+#include <stdio.h>
+int main() {
+	int t,n,total,notes;
+	scanf("%d",&t);
+	while(t--){
+	    scanf("%d",&n); //kgs of pulp
+	    total=n*1000;
+	    notes=total/100;
+	    printf("%d\n",notes);
+	}
+
+}
