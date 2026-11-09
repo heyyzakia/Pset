@@ -1,0 +1,34 @@
+//Problem: Scholarship Selection
+A college is selecting students for a scholarship based on three subject marks.
+A student qualifies only if:
+- Their total marks are at least 200.
+- Their marks in each subject are at least 50.
+You are given the marks of three subjects: A, B, and C.
+Determine whether the student qualifies.
+Input Format
+- First line contains T, the number of test cases.
+- Each test case contains three integers A, B, and C.
+Output Format
+Print:
+- YES if the student qualifies.
+- NO otherwise.
+
+
+solution:-
+#include<stdio.h>
+int main(){
+    int t,a,b,c,total;
+    scanf("%d",&t);
+    while(t--){
+        scanf("%d %d %d",&a,&b,&c);
+        total=a+b+c;
+        if(a>=50 && b>=50 && c>=50){
+            if(total>=200)
+                printf("YES\n");
+            else
+                printf("NO\n");
+        } else {
+            printf("No\n");
+        }
+    }
+}
