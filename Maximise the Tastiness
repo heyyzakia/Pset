@@ -1,0 +1,30 @@
+//Problem Statement
+
+Chef is making a dish that consists of exactly two ingredients. He has four ingredients \(A, B, C\), and \(D\) with tastiness values \(a, b, c\), and \(d\) respectively.
+To prepare the dish, he must choose:
+• Either \(A\) or \(B\) as the first ingredient.
+• Either \(C\) or \(D\) as the second ingredient.
+The total tastiness of the dish is the sum of the tastiness of its two ingredients. Find the maximum possible tastiness of the dish that the chef can prepare.
+
+Input Format
+
+• The first line of input will contain a single integer \(T\), denoting the number of test cases.
+• The first and only line of each test case contains four space-separated integers \(a, b, c\), and \(d\) — the tastiness of the four ingredients respectively.
+
+Output Format
+
+For each test case, output on a new line the maximum possible tastiness of the dish that Chef can prepare.
+
+
+solution:-
+#include <stdio.h>
+int main() {
+    int t,a,b,c,d;
+    scanf("%d",&t);
+
+    while(t--) {
+        scanf("%d %d %d %d",&a,&b,&c,&d);
+
+        printf("%d\n", (a>b?a:b) + (c>d?c:d));
+    }
+}
